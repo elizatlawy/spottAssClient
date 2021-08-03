@@ -2,7 +2,9 @@
   <div id="ProductTable" class="container mt-3 mb-5">
     <h1 class="mainTitle">Product Table Home Assignment </h1>
     <h2 class="subTitle">Eli Zatlawy</h2>
-    <b-alert id="errorAlert" variant="danger" :show="showError" v-for="(error,index) in errorArray" :key="index"
+    <b-alert id="errorAlert" variant="danger"
+             :show="showError"
+             v-for="(error,index) in errorArray" :key="index"
              dismissible>
       {{ error }}
     </b-alert>
@@ -48,9 +50,11 @@
         <edit-product-modal ref="EditProductModal" id="EditModal" :item="row.item"
                             @fetchProducts="fetchProducts"></edit-product-modal>
       </template>
-
     </b-table>
-    <label id="no-content-label" v-if="products.length===0 && !isTableBusy">No Content To Show</label>
+    <label id="no-content-label"
+           v-if="products.length===0 && !isTableBusy">
+      No Content To Show
+    </label>
   </div>
 </template>
 
@@ -83,11 +87,6 @@ export default {
       ],
       errorArray: [],
       showError: false
-    }
-  },
-  computed: {
-    rows() {
-      return this.products.length;
     }
   },
   created() {
