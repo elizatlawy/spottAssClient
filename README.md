@@ -1,4 +1,4 @@
-# spott_ass_client
+# Spott Assignmnet Client
 
 ## Project setup
 ```
