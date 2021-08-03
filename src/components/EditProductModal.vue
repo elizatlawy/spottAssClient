@@ -75,7 +75,7 @@
               </div>
             </div>
           </div>
-          <b-alert id="errorAlert" variant="danger" :show="showError" v-for="(error,index) in errorArray" :key="index"
+          <b-alert id="errorAlert" variant="danger" @dismissed="onDismissError" :show="showError" v-for="(error,index) in errorArray" :key="index"
                    dismissible>
             {{ error }}
           </b-alert>
@@ -121,6 +121,9 @@ export default {
       this.form.cogs.monthlyAdvertismentCost = itemFromParent.cogs.monthlyAdvertismentCost
       this.form.cogs.manufacturingCountry = itemFromParent.cogs.manufacturingCountry
       this.showModal = true
+    },
+    onDismissError(){
+      this.showError = false
     },
     hide() {
       this.showModal = false;
