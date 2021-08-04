@@ -97,7 +97,6 @@ export default {
   name: "EditProductModal",
   data: () => ({
     showModal: false,
-    required: true,
     form: {
       id: '',
       productName: '',
