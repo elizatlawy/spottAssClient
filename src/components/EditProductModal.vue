@@ -139,7 +139,7 @@ export default {
     async postProductCogs() {
       let productJson = this.form;
       try {
-        await this.axios.post("http://localhost:3000/cogs", productJson);
+        await this.axios.post("http://localhost:3001/cogs", productJson);
         this.hide();
         this.$emit('fetchProducts');
       } catch (error) {

@@ -104,7 +104,7 @@ export default {
         // await delay(1000)
         let response;
         response = await this.axios.get(
-            "http://localhost:3000/products"
+            "http://localhost:3001/products"
         );
         this.products = response.data;
       } catch (error) {
