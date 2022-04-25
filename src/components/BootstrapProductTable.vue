@@ -3,9 +3,9 @@
     <h1 class="mainTitle">Product Table Home Assignment </h1>
     <h2 class="subTitle">Eli Zatlawy</h2>
     <b-alert id="errorAlert" variant="danger"
-             :show="showError"
-             v-for="(error,index) in errorArray" :key="index"
-             dismissible>
+      :show="showError"
+      v-for="(error,index) in errorArray" :key="index"
+      dismissible>
       {{ error }}
     </b-alert>
     <b-row class="mb-3">
@@ -14,12 +14,12 @@
       </b-col>
     </b-row>
     <b-table id="product-table" striped hover head-variant="light"
-             :busy="isTableBusy"
-             :items="products"
-             :filter="filterInput"
-             :fields="fields"
-             :bordered="bordered"
-             :borderless="bordered">
+      :busy="isTableBusy"
+      :items="products"
+      :filter="filterInput"
+      :fields="fields"
+      :bordered="bordered"
+      :borderless="bordered">
       <template #table-busy>
         <div id="loadingSpinnerDiv" class="text-center text-danger my-2">
           <b-spinner class="align-middle"></b-spinner>
@@ -52,7 +52,7 @@
       </template>
     </b-table>
     <label id="no-content-label"
-           v-if="products.length===0 && !isTableBusy">
+      v-if="products.length===0 && !isTableBusy">
       No Content To Show
     </label>
   </div>
